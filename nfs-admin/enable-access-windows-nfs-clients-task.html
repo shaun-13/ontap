@@ -36544,11 +36544,19 @@
 <p class="page-details">
   
     
-    <time datetime="2023-07-19 17:26:59 -0400">07/19/2023</time>
+    <time datetime="2023-08-03 16:27:51 -0400">08/03/2023</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ahibbard">
+    <img  class="avatar avatar-small"
+          alt="netapp-ahibbard"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/85892662?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-mdavidson">
     <img  class="avatar avatar-small"
           alt="netapp-mdavidson"
@@ -36566,12 +36574,12 @@
 <p>ONTAP supports file access from Windows NFSv3 clients. This means that clients running Windows operating systems with NFSv3 support can now access files on NFSv3 exports on the cluster. To successfully use this functionality, you must properly configure the storage virtual machine (SVM) and be aware of certain requirements and limitations.</p>
 </div>
 <div class="paragraph">
-<div class="title">What you&#8217;ll need</div>
-<p>NFSv3 must be enabled on the SVM.</p>
-</div>
-<div class="paragraph">
 <div class="title">About this task</div>
 <p>By default, Windows NFSv3 client support is disabled.</p>
+</div>
+<div class="paragraph">
+<div class="title">Before you begin</div>
+<p>NFSv3 must be enabled on the SVM.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Steps</div>
@@ -36579,11 +36587,14 @@
 <li>
 <p>Enable Windows NFSv3 client support:</p>
 <div class="paragraph">
-<p><code>vserver nfs modify -vserver vserver_name -v3-ms-dos-client enabled</code></p>
+<p><code>vserver nfs modify -vserver <em>svm_name</em> -v3-ms-dos-client enabled</code></p>
 </div>
 </li>
 <li>
-<p>On all SVMs that support Windows NFSv3 clients, disable the <code>-enable-ejukebox</code> and <code>-v3-connection-drop</code> parameters: <code>vserver nfs modify -vserver vserver_name -enable-ejukebox false -v3-connection-drop disabled</code></p>
+<p>On all SVMs that support Windows NFSv3 clients, disable the <code>-enable-ejukebox</code> and <code>-v3-connection-drop</code> parameters:</p>
+<div class="paragraph">
+<p><code>vserver nfs modify -vserver vserver_name -enable-ejukebox false -v3-connection-drop disabled</code></p>
+</div>
 <div class="paragraph">
 <p>Windows NFSv3 clients can now mount exports on the storage system.</p>
 </div>

@@ -36544,11 +36544,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-08-29 17:22:22 -0400">08/29/2022</time>
+    <time datetime="2023-08-04 10:38:50 -0400">08/04/2023</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ahibbard">
+    <img  class="avatar avatar-small"
+          alt="netapp-ahibbard"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/85892662?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
     <img  class="avatar avatar-small"
           alt="netapp-thomi"
@@ -36626,6 +36634,18 @@
 <div class="content">
 <img src="../media/mirrored-aggregate-with-array-luns.gif" alt="This diagram is described by the preceding text.">
 </div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+It&#8217;s recommended you maintain at least 20% free space for mirrored aggregates for optimal storage performance and availability. Although the recommendation is 10% for non-mirrored aggregates, the additional 10% of space may be used by the filesystem to absorb incremental changes. Incremental changes increase space utilization for mirrored aggregates due to ONTAP&#8217;s copy-on-write Snapshot-based architecture. Failure to adhere to these best practices may have a negative impact on performance.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>

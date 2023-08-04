@@ -36544,7 +36544,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-19 16:46:17 -0400">05/19/2023</time>
+    <time datetime="2023-08-04 10:38:50 -0400">08/04/2023</time>
     
   
 
@@ -36602,6 +36602,9 @@ You can optionally use SyncMirror in a non-MetroCluster implementation to protec
 <div class="paragraph">
 <p>Keep in mind that an aggregate mirrored using SyncMirror requires twice as much storage as an unmirrored aggregate. Each plex requires as many disks as the plex it mirrors. You would need 2,880 GB of disk space, for example, to mirror a 1,440 GB aggregate, 1,440 GB for each plex.</p>
 </div>
+<div class="paragraph">
+<p>With SyncMirror, it&#8217;s recommended you maintain at least 20% free space for mirrored aggregates for optimal storage performance and availability. Although the recommendation is 10% for non-mirrored aggregates, the additional 10% of space may be used by the filesystem to absorb incremental changes. Incremental changes increase space utilization for mirrored aggregates due to ONTAP&#8217;s copy-on-write Snapshot-based architecture. Failure to adhere to these best practices may have a negative impact on SyncMirror resynchronization performance, which indirectly impacts operational workflows such as NDU for non-shared cloud deployments and switchback for MetroCluster deployments.</p>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -36609,9 +36612,7 @@ You can optionally use SyncMirror in a non-MetroCluster implementation to protec
 <img src="/us-en/ontap/images/note.svg" alt="Note">
 </td>
 <td class="content">
-<div class="paragraph">
-<p>SyncMirror is also available for FlexArray Virtualization implementations.</p>
-</div>
+SyncMirror is also available for FlexArray Virtualization implementations.
 </td>
 </tr>
 </table>

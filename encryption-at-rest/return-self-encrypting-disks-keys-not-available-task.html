@@ -36544,7 +36544,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-08-10 12:15:42 -0400">08/10/2022</time>
+    <time datetime="2023-08-03 16:27:51 -0400">08/03/2023</time>
     
   
 
@@ -36582,7 +36582,19 @@
 <p>You should use this process only if you are certain that the authentication keys for the FIPS drive or SED are permanently lost and that you cannot recover them.</p>
 </div>
 <div class="paragraph">
-<p>If the disks are partitioned, they must first be unpartitioned before you can start this process. include::../_include/unpartition-disk.adoc[]</p>
+<p>If the disks are partitioned, they must first be unpartitioned before you can start this process.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+The command to unpartition a disk is only available at the diag level and should be performed only under NetApp Support supervision. <strong>It is highly recommended that you contact NetApp Support before you proceed.</strong>  You can also refer to the Knowledge Base article <a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/FAS_Systems/How_to_unpartition_a_spare_drive_in_ONTAP" target="_blank" rel="noopener">How to unpartition a spare drive in ONTAP</a>.
+</td>
+</tr>
+</table>
 </div>
 <div class="olist arabic">
 <div class="title">Steps</div>
@@ -36687,7 +36699,7 @@ Verify the operation succeeded with the command <code>storage encryption disk sh
 </ol>
 </div>
 <div class="paragraph">
-<p>For complete command syntax, see the man pages.</p>
+<p>For complete command syntax, see the <a href="https://docs.netapp.com/us-en/ontap-cli-9131/storage-disk-assign.html" target="_blank" rel="noopener">command reference</a>.</p>
 </div>
 
     </article>

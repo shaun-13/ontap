@@ -36751,6 +36751,18 @@ SM-BC relationships cannot be established on volumes mounted for NAS access.
 <div class="paragraph">
 <p>If site B is running ONTAP 9.10.1 or earlier, only the volumes associated with the consistency groups located on mirrored aggregates are replicated to site B. The consistency group configurations are only replicated to site B, if both sites are running ONTAP 9.11.1 or later. After site B is upgraded to ONTAP 9.11.1, data for consistency groups on site A that have all their associated volumes placed on mirrored aggregates are replicated to site B.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+It&#8217;s recommended you maintain at least 20% free space for mirrored aggregates for optimal storage performance and availability. Although the recommendation is 10% for non-mirrored aggregates, the additional 10% of space may be used by the filesystem to absorb incremental changes. Incremental changes increase space utilization for mirrored aggregates due to ONTAP&#8217;s copy-on-write Snapshot-based architecture. Failure to adhere to these best practices may have a negative impact on performance.
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 </div>

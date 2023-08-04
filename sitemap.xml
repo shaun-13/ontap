@@ -1268,7 +1268,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/volumes/change-maximum-number-files-allowed-concept.html</loc>
       
-      <lastmod>2021-10-14T17:50:12-04:00</lastmod>
+      <lastmod>2023-08-03T16:27:51-04:00</lastmod>
       
     </url>
   
@@ -4180,7 +4180,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/volumes/create-flexclone-task.html</loc>
       
-      <lastmod>2023-06-08T20:42:42-04:00</lastmod>
+      <lastmod>2023-08-03T16:27:51-04:00</lastmod>
       
     </url>
   
@@ -4698,7 +4698,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/create-snaplock-aggregate-task.html</loc>
       
-      <lastmod>2022-01-14T10:48:25-05:00</lastmod>
+      <lastmod>2023-08-03T16:27:51-04:00</lastmod>
       
     </url>
   
@@ -6728,7 +6728,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/nfs-admin/enable-access-windows-nfs-clients-task.html</loc>
       
-      <lastmod>2023-07-19T17:26:59-04:00</lastmod>
+      <lastmod>2023-08-03T16:27:51-04:00</lastmod>
       
     </url>
   
@@ -9234,7 +9234,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/consistency-groups/</loc>
       
-      <lastmod>2023-06-09T14:05:11-04:00</lastmod>
+      <lastmod>2023-08-04T10:38:50-04:00</lastmod>
       
     </url>
   
@@ -10704,7 +10704,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/concepts/mcc-config-concept.html</loc>
       
-      <lastmod>2023-05-19T16:46:17-04:00</lastmod>
+      <lastmod>2023-08-04T10:38:50-04:00</lastmod>
       
     </url>
   
@@ -10893,7 +10893,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/mirrored-unmirrored-aggregates-concept.html</loc>
       
-      <lastmod>2022-08-29T17:22:22-04:00</lastmod>
+      <lastmod>2023-08-04T10:38:50-04:00</lastmod>
       
     </url>
   
@@ -12650,7 +12650,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/concepts/rdma-concept.html</loc>
       
-      <lastmod>2023-04-09T17:33:52-04:00</lastmod>
+      <lastmod>2023-08-03T14:39:48-04:00</lastmod>
       
     </url>
   
@@ -13623,7 +13623,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/encryption-at-rest/return-self-encrypting-disks-keys-not-available-task.html</loc>
       
-      <lastmod>2022-08-10T12:15:42-04:00</lastmod>
+      <lastmod>2023-08-03T16:27:51-04:00</lastmod>
       
     </url>
   
@@ -13882,7 +13882,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap//search.html</loc>
       
-      <lastmod>2023-08-04T00:37:16-04:00</lastmod>
+      <lastmod>2023-08-04T14:26:18-04:00</lastmod>
       
     </url>
   
@@ -14274,7 +14274,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/fabricpool/setup-object-stores-mcc-task.html</loc>
       
-      <lastmod>2021-10-14T17:50:12-04:00</lastmod>
+      <lastmod>2023-08-03T16:27:51-04:00</lastmod>
       
     </url>
   
@@ -16220,7 +16220,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/task_nas_flexcache.html</loc>
       
-      <lastmod>2022-05-11T15:49:03-04:00</lastmod>
+      <lastmod>2023-08-04T10:38:50-04:00</lastmod>
       
     </url>
   

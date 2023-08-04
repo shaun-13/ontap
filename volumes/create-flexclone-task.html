@@ -36544,7 +36544,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-06-08 20:42:42 -0400">06/08/2023</time>
+    <time datetime="2023-08-03 16:27:51 -0400">08/03/2023</time>
     
   
 
@@ -36554,6 +36554,14 @@
           alt="netapp-lenida"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/54081920?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ahibbard">
+    <img  class="avatar avatar-small"
+          alt="netapp-ahibbard"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/85892662?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -36568,7 +36576,7 @@
 <p>You can create a data protection FlexClone volume from a SnapMirror destination volume or from a parent FlexVol volume that is a SnapVault secondary volume. Beginning with ONTAP 9.7, you can create a FlexClone volume from a FlexGroup volume. After you create a FlexClone volume, you cannot delete the parent volume while the FlexClone volume exists.</p>
 </div>
 <div class="ulist">
-<div class="title">What you&#8217;ll need</div>
+<div class="title">Before you begin</div>
 <ul>
 <li>
 <p>The FlexClone license must be installed on the cluster.</p>
@@ -36598,9 +36606,7 @@
 <img src="/us-en/ontap/images/note.svg" alt="Note">
 </td>
 <td class="content">
-<div class="paragraph">
-<p>While creating a read-write FlexClone volume from the read-write parent volume, you do not need to specify the base Snapshot copy. ONTAP creates a Snapshot copy if you do not name any specific Snapshot copy that is to be used as the base Snapshot copy for the clone. You must specify the base Snapshot copy for creating a FlexClone volume when the parent volume is a data protection volume.</p>
-</div>
+While creating a read-write FlexClone volume from the read-write parent volume, you do not need to specify the base Snapshot copy. ONTAP creates a Snapshot copy if you do not name any specific Snapshot copy that is to be used as the base Snapshot copy for the clone. You must specify the base Snapshot copy for creating a FlexClone volume when the parent volume is a data protection volume.
 </td>
 </tr>
 </table>
