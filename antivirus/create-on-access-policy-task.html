@@ -36521,7 +36521,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-10 03:38:33 +0000">05/10/2023</time>
+    <time datetime="2023-08-10 16:02:04 +0000">08/10/2023</time>
     
   
 
@@ -36603,6 +36603,9 @@
 </ul>
 </div>
 </li>
+<li>
+<p>An on-access policy is required for an <a href="create-on-demand-task-task.html">on-demand scan</a>. To avoid on-access scanning for, you should set <code>-scan-files-with-no-ext</code> to false and <code>-file-ext-to-exclude</code> to * to exclude all extensions.</p>
+</li>
 </ul>
 </div>
 <div class="olist arabic">
@@ -36634,7 +36637,7 @@ The following command creates an on-access policy named <code>Policy1</code> on 
 </div>
 </li>
 <li>
-<p>Verify that the on-access policy has been created: <code>vserver vscan on-access-policy show -instance <em>data_SVM|cluster_admin_SVM</em> -policy-name policy_name</code></p>
+<p>Verify that the on-access policy has been created: <code>vserver vscan on-access-policy show -instance <em>data_SVM|cluster_admin_SVM</em> -policy-name <em>name</em></code></p>
 <div class="paragraph">
 <p>For a complete list of options, see the man page for the command.</p>
 </div>

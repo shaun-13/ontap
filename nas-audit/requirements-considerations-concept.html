@@ -36521,7 +36521,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-04 20:44:16 +0000">02/04/2022</time>
+    <time datetime="2023-08-10 16:33:32 +0000">08/10/2023</time>
     
   
 
@@ -36547,7 +36547,27 @@
 <div class="ulist">
 <ul>
 <li>
-<p>The maximum number of auditing-enabled SVMs supported in a cluster is 50.</p>
+<p>The maximum number of auditing-enabled SVMs supported depends on your version of ONTAP:</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">ONTAP version</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Maximum</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9.8 and earlier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9.9.1 and later</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+</tr>
+</tbody>
+</table>
 </li>
 <li>
 <p>Auditing is not tied to SMB or NFS licensing.</p>

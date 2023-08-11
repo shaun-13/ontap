@@ -36521,11 +36521,19 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-10 02:49:40 +0000">05/10/2023</time>
+    <time datetime="2023-08-10 16:02:04 +0000">08/10/2023</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ahibbard">
+    <img  class="avatar avatar-small"
+          alt="netapp-ahibbard"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/85892662?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-powr">
     <img  class="avatar avatar-small"
           alt="netapp-powr"
@@ -36552,7 +36560,7 @@
 <li>
 <p>Schedule an on-demand task:</p>
 <div class="paragraph">
-<p><code>vserver vscan on-demand-task schedule -vserver data_SVM -task-name task_name -schedule cron_schedule</code></p>
+<p><code>vserver vscan on-demand-task schedule -vserver <em>data_SVM</em> -task-name <em>task_name</em> -schedule cron_schedule</code></p>
 </div>
 <div class="paragraph">
 <p>The following command schedules an on-access task named <code>Task2</code> on the <code>vs2</code> SVM:</p>
@@ -36563,25 +36571,14 @@
 [Job 142]: Vscan On-Demand job is queued. Use the "job show -id 142" command to view the status.</pre>
 </div>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap/images/note.svg" alt="Note">
-</td>
-<td class="content">
 <div class="paragraph">
-<p>You can use the <code>job show</code> command to view the status of the job. You can use the <code>job pause</code> and <code>job resume</code> commands to pause and restart the job, or the <code>job stop</code> command to end the job.</p>
-</div>
-</td>
-</tr>
-</table>
+<p>To view the status of the job, use the <code>job show</code> command. The <code>job pause</code> and <code>job resume</code> commands, respectively pause and restart the job; the <code>job stop</code> command terminates the job.</p>
 </div>
 </li>
 <li>
 <p>Verify that the on-demand task has been scheduled:</p>
 <div class="paragraph">
-<p><code>vserver vscan on-demand-task show -instance data_SVM -task-name task_name</code></p>
+<p><code>vserver vscan on-demand-task show -instance <em>data_SVM</em> -task-name <em>task_name</em></code></p>
 </div>
 <div class="paragraph">
 <p>For a complete list of options, see the man page for the command.</p>

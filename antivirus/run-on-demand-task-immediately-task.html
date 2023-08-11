@@ -36521,11 +36521,19 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-09 23:25:28 +0000">05/09/2023</time>
+    <time datetime="2023-08-10 16:33:32 +0000">08/10/2023</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ahibbard">
+    <img  class="avatar avatar-small"
+          alt="netapp-ahibbard"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/85892662?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-powr">
     <img  class="avatar avatar-small"
           alt="netapp-powr"
@@ -36543,7 +36551,7 @@
 <p>You can run an on-demand task immediately, whether or not you have assigned a schedule.</p>
 </div>
 <div class="paragraph">
-<div class="title">What you&#8217;ll need</div>
+<div class="title">Before you begin</div>
 <p>You must have enabled scanning on the SVM.</p>
 </div>
 <div class="olist arabic">
@@ -36552,7 +36560,7 @@
 <li>
 <p>Run an on-demand task immediately:</p>
 <div class="paragraph">
-<p><code>vserver vscan on-demand-task run -vserver data_SVM -task-name task_name</code></p>
+<p><code>vserver vscan on-demand-task run -vserver <em>data_SVM</em> -task-name <em>task_name</em></code></p>
 </div>
 <div class="paragraph">
 <p>The following command runs an on-access task named <code>Task1</code> on the <code>vs1</code> SVM:</p>
@@ -36570,9 +36578,7 @@
 <img src="/us-en/ontap/images/note.svg" alt="Note">
 </td>
 <td class="content">
-<div class="paragraph">
-<p>You can use the <code>job show</code> command to view the status of the job. You can use the <code>job pause</code> and <code>job resume</code> commands to pause and restart the job, or the <code>job stop</code> command to end the job.</p>
-</div>
+You can use the <code>job show</code> command to view the status of the job. You can use the <code>job pause</code> and <code>job resume</code> commands to pause and restart the job, or the <code>job stop</code> command to end the job.
 </td>
 </tr>
 </table>
