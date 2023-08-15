@@ -703,8 +703,6 @@
 
 
 
-
-
         </li>
       </ul>
     
@@ -11726,6 +11724,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -16193,11 +16193,11 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Overview"
+      data-pdf-filename="Get started"
       data-li-level="3#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/software_setup/concept_decide_whether_to_use_ontap_cli.html">
-        Overview
+    ><a class="na-navbar-padding" href="/us-en/ontap/software_setup/index.html">
+        Get started
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Set up a cluster with System Manager"
@@ -16215,13 +16215,6 @@
       </a>
       <ul style="display: none;">
         <li 
-      data-pdf-exists="true" 
-      data-pdf-filename="Gather information"
-      data-li-level="4#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/software_setup/concept_set_up_the_cluster.html">
-        Gather information
-      </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Create the cluster on the first node"
       data-li-level="4#" 
@@ -31055,6 +31048,13 @@
         Pause
       </a></li><li 
       data-pdf-exists="true" 
+      data-pdf-filename="Manage attack detection parameters"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/anti-ransomware/manage-parameters-task.html">
+        Manage attack detection parameters
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Respond to abnormal activity"
       data-li-level="3#" 
       class=" "
@@ -36521,7 +36521,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-07-03 15:34:27 +0000">07/03/2023</time>
+    <time datetime="2023-08-14 13:58:25 +0000">08/14/2023</time>
     
   
 
@@ -36534,19 +36534,19 @@
           style="border-radius: 50%;"/>
   </a>
   
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-forry">
-    <img  class="avatar avatar-small"
-          alt="netapp-forry"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/51911827?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ahibbard">
     <img  class="avatar avatar-small"
           alt="netapp-ahibbard"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/85892662?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-forry">
+    <img  class="avatar avatar-small"
+          alt="netapp-forry"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/51911827?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -36574,7 +36574,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>The availability of Autonomous Ransomware Protection features depends on the version of ONTAP you are using.</p>
+<p>Autonomous Ransomwware Protection is available for NAS workloads beginning with ONTAP 9.10.1. Before deploying ARP, you should be aware of the recommended uses and supported configurations as well as performance implications.</p>
 </div>
 </div>
 </div>
@@ -36582,17 +36582,12 @@
 <h2 id="supported-and-unsupported-configurations">Supported and unsupported configurations</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>ONTAP platform support:</p>
+<p>When deciding to use ARP, it&#8217;s important to ensure that your volume&#8217;s workload is suited to ARP and that it meets required system configurations.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>The Autonomous Ransomware Protection (ARP) feature is available for all on-premises ONTAP systems beginning with ONTAP 9.10.1.</p>
-</li>
-</ul>
-</div>
+<div class="sect2">
+<h3 id="suitable-workloads">Suitable workloads</h3>
 <div class="paragraph">
-<p>Suitable workloads:</p>
+<p>ARP is suited for:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -36602,43 +36597,30 @@
 <li>
 <p>Windows or Linux home directories</p>
 <div class="paragraph">
-<p>Because users could create files with extensions that weren&#8217;t detected in the learning period, there is greater possibility of false positives in this workload.</p>
+<p>Because users could create files with extensions that weren&#8217;t detected in the learning period, there a is greater possibility of false positives in this workload.</p>
 </div>
 </li>
 <li>
 <p>Images and video</p>
 <div class="paragraph">
-<p>For example, health care records and Electronic Design Automation (EDA) data.</p>
+<p>For example, health care records and Electronic Design Automation (EDA) data</p>
 </div>
 </li>
 </ul>
 </div>
+</div>
+<div class="sect2">
+<h3 id="unsuitable-workloads">Unsuitable workloads</h3>
 <div class="paragraph">
-<p>Beginning with ONTAP 9.12.1, ARP is available for these configurations:</p>
+<p>ARP is not suited for:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Volumes protected with SnapMirror</p>
+<p>Workloads with a high frequency of file create or delete (hundreds of thousands of files in few seconds; for example, test/development workloads)</p>
 </li>
 <li>
-<p>SVMs protected with SnapMirror</p>
-</li>
-<li>
-<p>SVMs enabled for migration (SVM data mobility)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Unsuitable workloads:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Workloads with a high frequency of file create or delete (hundreds of thousands of files in few seconds; for example, test/dev workloads)</p>
-</li>
-<li>
-<p>ARP depends on the ability to recognize an unusual surge in file create, rename, or delete activity. If the application itself is the source of the file activity, it cannot be effectively distinguished from ransomware activity</p>
+<p>ARP&#8217;s threat detection depends on its ability recognize an unusual surge in file create, rename, or delete activity. If the application itself is the source of the file activity, it cannot be effectively distinguished from ransomware activity.</p>
 </li>
 <li>
 <p>Workloads where the application or the host encrypts data<br>
@@ -36646,75 +36628,72 @@ ARP depends on distinguishing incoming data as encrypted or unencrypted. If the 
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>Unsupported system configurations:</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>SAN environments</p>
-</li>
-<li>
-<p>ONTAP S3 environments</p>
-</li>
-<li>
-<p>VMDKs on NFS</p>
-</li>
-</ul>
+<div class="sect2">
+<h3 id="supported-configurations">Supported configurations</h3>
+<div class="paragraph">
+<p>ARP is available for NFS and SMB volumes in on-premises ONTAP systems beginning with ONTAP 9.10.1.</p>
 </div>
 <div class="paragraph">
-<p>Volume requirements:</p>
+<p>Support for other configurations and volume types is available in the following ONTAP versions:</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Less than 100% full</p>
-</li>
-<li>
-<p>Junction path must be active</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Unsupported volume types:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Offline volumes</p>
-</li>
-<li>
-<p>Restricted volumes</p>
-</li>
-<li>
-<p>SnapLock volumes</p>
-</li>
-<li>
-<p>FlexGroup volumes (beginning with ONTAP 9.13.1, FlexGroup volumes are supported)</p>
-</li>
-<li>
-<p>FlexCache volumes (ARP is supported on origin FlexVol volumes but not on cache volumes)</p>
-</li>
-<li>
-<p>Root volumes of storage VMs</p>
-</li>
-<li>
-<p>SnapMirror Synchronous</p>
-</li>
-<li>
-<p>SAN-only volumes</p>
-</li>
-<li>
-<p>Volumes of stopped storage VMs</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="snapmirror-and-arp-interoperability">SnapMirror and ARP interoperability</h2>
-<div class="sectionbody">
-<div class="paragraph">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top">ONTAP 9.13.1</th>
+<th class="tableblock halign-left valign-top">ONTAP 9.12.1</th>
+<th class="tableblock halign-left valign-top">ONTAP 9.11.1</th>
+<th class="tableblock halign-left valign-top">ONTAP 9.10.1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Volumes protected with Asynchronous SnapMirror</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SVMs protected with Asynchronous SnapMirror</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SVMs enabled for data migration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FlexGroup volumes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multi-admin verification</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div id="snapmirror" class="paragraph">
+<div class="title">SnapMirror and ARP interoperability</div>
 <p>Beginning with ONTAP 9.12.1, ARP is supported on Asynchronous SnapMirror destination volumes. ARP is <strong>not</strong> supported with SnapMirror Synchronous.</p>
 </div>
 <div class="paragraph">
@@ -36725,6 +36704,119 @@ ARP depends on distinguishing incoming data as encrypted or unencrypted. If the 
 </div>
 <div class="paragraph">
 <p>In ONTAP 9.10.1 and 9.11.1, SnapMirror does not transfer the ARP configuration state, training data, and Snapshot copies from source to destination volumes. Hence when the SnapMirror destination volume is converted to RW, ARP on the destination volume must be explicitly enabled in learning mode after conversion.</p>
+</div>
+<details>
+<summary class="title">ARP with VMDKs on NFS</summary>
+<div class="content">
+<div class="paragraph">
+<p>If you plan to use ARP in a VMDK on NFS configuration, there are limitations to ARP&#8217;s protection. ARP offers protection in VDMK on NFS configurations, however it is not recommended for workloads with high-entropy files inside the VM.</p>
+</div>
+<div class="paragraph">
+<div class="title">Changes outside the VM</div>
+<p>ARP can detect file extension changes on an NFS volume outside of the VM if a new extension enters the volume encrypted or a file extension changes. Detectable file extension changes are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>.vmx</p>
+</li>
+<li>
+<p>.vmxf</p>
+</li>
+<li>
+<p>.vmdk</p>
+</li>
+<li>
+<p>-flat.vmdk</p>
+</li>
+<li>
+<p>.nvram</p>
+</li>
+<li>
+<p>.vmem</p>
+</li>
+<li>
+<p>.vmsd</p>
+</li>
+<li>
+<p>.vmsn</p>
+</li>
+<li>
+<p>.vswp</p>
+</li>
+<li>
+<p>.vmss</p>
+</li>
+<li>
+<p>.log</p>
+</li>
+<li>
+<p>-\#.log</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Changes inside the VM</div>
+<p>If the ransomware attack targets the VM and files inside of the VM are altered without making changes outside the VM, ARP detects the threat if the default entropy of the VM is low (for example .txt, .docx, or .mp4 files). Although ARP will create a protective Snapshot in this scenario, it will not generate a threat alert because the file extensions outside of the VM have not been tampered with.</p>
+</div>
+<div class="paragraph">
+<p>If, by default, the files are high-entropy (for example .gzip or password-protected files), ARP will not detect a change in baseline entropy and thus will not detect the threat.</p>
+</div>
+</div>
+</details>
+</div>
+<div class="sect2">
+<h3 id="unsupported-configurations">Unsupported configurations</h3>
+<div class="paragraph">
+<p>ARP is not supported in the following system configurations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ONTAP S3 environments</p>
+</li>
+<li>
+<p>SAN environments</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>ARP does not support the following volume configurations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>FlexGroup volumes (in ONTAP 9.10.1 through 9.12.1. Beginning with ONTAP 9.13.1, FlexGroup volumes are supported)</p>
+</li>
+<li>
+<p>FlexCache volumes (ARP is supported on origin FlexVol volumes but not on cache volumes)</p>
+</li>
+<li>
+<p>Offline volumes</p>
+</li>
+<li>
+<p>SAN-only volumes</p>
+</li>
+<li>
+<p>SnapLock volumes</p>
+</li>
+<li>
+<p>SnapMirror Synchronous</p>
+</li>
+<li>
+<p>Asynchronous SnapMirror (in ONTAP 9.10.1 through 9.12.1. Asynchronous SnapMirror is supported beginning with ONTAP 9.12.1. For more information, see <a href="#snapmirror">SnapMirror and ARP interoperability</a>.)</p>
+</li>
+<li>
+<p>Restricted volumes</p>
+</li>
+<li>
+<p>Root volumes of storage VMs</p>
+</li>
+<li>
+<p>Volumes of stopped storage VMs</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>

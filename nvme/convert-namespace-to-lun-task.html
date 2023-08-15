@@ -9,14 +9,14 @@
   <meta property="og:title" content="Convert a namespace into a LUN" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/nvme/convert-namespace-to-lun-task.html" />
-	<meta property="og:description" content="Beginning with ONTAP 9.11.1, you can use the ONTAP CLI to transition a single existing NVMe namespace to a LUN without any data loss." />
+	<meta property="og:description" content="Beginning with ONTAP 9.11.1, you can use the ONTAP CLI to convert in-place an existing NVMe namespace to a LUN." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Beginning with ONTAP 9.11.1, you can use the ONTAP CLI to transition a single existing NVMe namespace to a LUN without any data loss.">
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Beginning with ONTAP 9.11.1, you can use the ONTAP CLI to convert in-place an existing NVMe namespace to a LUN.">
   <meta name="keywords" content=" nvme, convert, namespace, lun"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
@@ -689,8 +689,6 @@
             Set up a cluster with the CLI
           </a>
           
-
-
 
 
 
@@ -11726,6 +11724,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -16193,11 +16193,11 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Overview"
+      data-pdf-filename="Get started"
       data-li-level="3#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/software_setup/concept_decide_whether_to_use_ontap_cli.html">
-        Overview
+    ><a class="na-navbar-padding" href="/us-en/ontap/software_setup/index.html">
+        Get started
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Set up a cluster with System Manager"
@@ -16215,13 +16215,6 @@
       </a>
       <ul style="display: none;">
         <li 
-      data-pdf-exists="true" 
-      data-pdf-filename="Gather information"
-      data-li-level="4#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/software_setup/concept_set_up_the_cluster.html">
-        Gather information
-      </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Create the cluster on the first node"
       data-li-level="4#" 
@@ -31055,6 +31048,13 @@
         Pause
       </a></li><li 
       data-pdf-exists="true" 
+      data-pdf-filename="Manage attack detection parameters"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/anti-ransomware/manage-parameters-task.html">
+        Manage attack detection parameters
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Respond to abnormal activity"
       data-li-level="3#" 
       class=" "
@@ -36521,11 +36521,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-20 21:05:29 +0000">04/20/2022</time>
+    <time datetime="2023-08-08 14:56:34 +0000">08/08/2023</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
+    <img  class="avatar avatar-small"
+          alt="netapp-thomi"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/54111336?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-lisa">
     <img  class="avatar avatar-small"
           alt="netapp-lisa"
@@ -36550,7 +36558,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>Beginning with ONTAP 9.11.1, you can use the ONTAP CLI to in-place convert an existing NVMe namespace to a LUN.</p>
+<p>Beginning with ONTAP 9.11.1, you can use the ONTAP CLI to convert in-place an existing NVMe namespace to a LUN.</p>
 </div>
 </div>
 </div>
@@ -36560,13 +36568,13 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Specified NVMe namespace should not have any existing maps to a Subsystem.</p>
+<p>The specified NVMe namespace should not have any existing maps to a subsystem.</p>
 </li>
 <li>
-<p>Namespace should not be part of a snapshot or on the destination side of SnapMirror relationship as a read-only namespace.</p>
+<p>The namespace should not be part of a Snapshot copy or on the destination side of a SnapMirror relationship as a read-only namespace.</p>
 </li>
 <li>
-<p>Since NVMe namespaces are only supported with specific platforms and network cards, this feature only works with specific hardware.</p>
+<p>Because NVMe namespaces are only supported with specific platforms and network cards, this feature only works with specific hardware.</p>
 </li>
 </ul>
 </div>
@@ -36574,7 +36582,7 @@
 <div class="title">Steps</div>
 <ol class="arabic">
 <li>
-<p>You enter the following command to convert an NVMe namespace to a LUN:</p>
+<p>Enter the following command to convert an NVMe namespace to a LUN:</p>
 <div class="paragraph">
 <p><code>lun convert-from-namespace -vserver -namespace-path</code></p>
 </div>

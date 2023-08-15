@@ -703,8 +703,6 @@
 
 
 
-
-
         </li>
       </ul>
     
@@ -11720,6 +11718,8 @@
 
 
 
+
+
     <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
   
 
@@ -16193,11 +16193,11 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Overview"
+      data-pdf-filename="Get started"
       data-li-level="3#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/software_setup/concept_decide_whether_to_use_ontap_cli.html">
-        Overview
+    ><a class="na-navbar-padding" href="/us-en/ontap/software_setup/index.html">
+        Get started
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Set up a cluster with System Manager"
@@ -16215,13 +16215,6 @@
       </a>
       <ul style="display: none;">
         <li 
-      data-pdf-exists="true" 
-      data-pdf-filename="Gather information"
-      data-li-level="4#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/software_setup/concept_set_up_the_cluster.html">
-        Gather information
-      </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Create the cluster on the first node"
       data-li-level="4#" 
@@ -31055,6 +31048,13 @@
         Pause
       </a></li><li 
       data-pdf-exists="true" 
+      data-pdf-filename="Manage attack detection parameters"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/anti-ransomware/manage-parameters-task.html">
+        Manage attack detection parameters
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Respond to abnormal activity"
       data-li-level="3#" 
       class=" "
@@ -36521,7 +36521,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-18 20:49:38 +0000">05/18/2023</time>
+    <time datetime="2023-08-11 16:51:25 +0000">08/11/2023</time>
     
   
 
@@ -36534,19 +36534,19 @@
           style="border-radius: 50%;"/>
   </a>
   
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-dbagwell">
-    <img  class="avatar avatar-small"
-          alt="netapp-dbagwell"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/53352450?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ahibbard">
     <img  class="avatar avatar-small"
           alt="netapp-ahibbard"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/85892662?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-dbagwell">
+    <img  class="avatar avatar-small"
+          alt="netapp-dbagwell"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/53352450?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -36566,32 +36566,9 @@
 <div class="paragraph lead">
 <p>Snapshot copies named “Anti_ransomware_backup” are created when Autonomous Ransomware Protection (ARP) detects a potential attack. You can restore data from these ARP copies or from other Snapshot copies.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap/images/note.svg" alt="Note">
-</td>
-<td class="content">
-If a ransomware attack occurs, see the Knowledge Base article <a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/Ransomware_prevention_and_recovery_in_ONTAP" target="_blank" rel="noopener">Ransomware prevention and recovery in ONTAP</a> for additional information on recovery and future mitigation.
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
 <div class="title">About this task</div>
 <p>If the volume has SnapMirror relationships, manually replicate all mirror copies of the volume immediately after you restore from a Snapshot copy. Not doing so can result in unusable mirror copies that must be deleted and recreated.</p>
-</div>
-<div class="ulist">
-<div class="title">Before you begin</div>
-<ul>
-<li>
-<p>ARP enabled</p>
-</li>
-<li>
-<p>Reports from potential ransomware attacks</p>
-</li>
-</ul>
 </div>
 <div class="paragraph">
 <div class="title">Steps</div>
@@ -36605,7 +36582,7 @@ If a ransomware attack occurs, see the Knowledge Base article <a href="https://k
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>If you want to restore data from earlier Snapshot copies, instead of from the ARP copies, you must do the following to release the anti-ransomware Snapshot lock.  If you want to restore from the ARP copies, it is not necessary to release the lock and you can skip this step.</p>
+<p>If you want to restore data from earlier Snapshot copies instead of from the ARP copies, you must release the anti-ransomware Snapshot lock. If you want to restore from the ARP copies, it is not necessary to release the lock and you can skip this step.</p>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -36622,16 +36599,16 @@ If a ransomware attack occurs, see the Knowledge Base article <a href="https://k
 <td class="tableblock halign-left valign-top"><div class="content"><div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Click <strong>Storage &gt; Volumes</strong>.</p>
+<p>Select <strong>Storage &gt; Volumes</strong>.</p>
 </li>
 <li>
-<p>Select <strong>Security</strong>, and click <strong>View Suspected File Types</strong></p>
+<p>Select <strong>Security</strong> then <strong>View Suspected File Types</strong></p>
 </li>
 <li>
 <p>Mark the files as "False Positive" .</p>
 </li>
 <li>
-<p>Click <strong>Update</strong> and <strong>Clear Suspect File Types</strong></p>
+<p>Select <strong>Update</strong> and <strong>Clear Suspect File Types</strong></p>
 </li>
 </ol>
 </div></div></td>
@@ -36648,11 +36625,11 @@ If a ransomware attack occurs, see the Knowledge Base article <a href="https://k
 <li>
 <p>Display the Snapshot copies in volumes:</p>
 <div class="paragraph">
-<p>Click <strong>Storage &gt; Volumes</strong>, select the volume, and click <strong>Snapshot Copies</strong>.</p>
+<p>Select <strong>Storage &gt; Volumes</strong>, then select the volume and <strong>Snapshot Copies</strong>.</p>
 </div>
 </li>
 <li>
-<p>Click <span class="image"><img src="../media/icon_kabob.gif" alt="Menu Option"></span> next to the Snapshot copy you want to restore, and select <strong>Restore</strong>.</p>
+<p>Select <span class="image"><img src="../media/icon_kabob.gif" alt="Menu Option"></span> next to the Snapshot copy you want to restore then <strong>Restore</strong>.</p>
 </li>
 </ol>
 </div>
@@ -36757,6 +36734,14 @@ vs1	 vol1   hourly.2013-01-25_0005  valid   224KB     0%    0%
 </div>
 </div>
 </div>
+</div>
+<div class="ulist">
+<div class="title">More information</div>
+<ul>
+<li>
+<p><a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/Ransomware_prevention_and_recovery_in_ONTAP" target="_blank" rel="noopener">KB: Ransomware prevention and recovery in ONTAP</a></p>
+</li>
+</ul>
 </div>
 
     </article>

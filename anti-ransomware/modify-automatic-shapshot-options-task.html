@@ -703,8 +703,6 @@
 
 
 
-
-
         </li>
       </ul>
     
@@ -11722,6 +11720,8 @@
 
 
 
+
+
     <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
   
 
@@ -16193,11 +16193,11 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Overview"
+      data-pdf-filename="Get started"
       data-li-level="3#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/software_setup/concept_decide_whether_to_use_ontap_cli.html">
-        Overview
+    ><a class="na-navbar-padding" href="/us-en/ontap/software_setup/index.html">
+        Get started
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Set up a cluster with System Manager"
@@ -16215,13 +16215,6 @@
       </a>
       <ul style="display: none;">
         <li 
-      data-pdf-exists="true" 
-      data-pdf-filename="Gather information"
-      data-li-level="4#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/software_setup/concept_set_up_the_cluster.html">
-        Gather information
-      </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Create the cluster on the first node"
       data-li-level="4#" 
@@ -31055,6 +31048,13 @@
         Pause
       </a></li><li 
       data-pdf-exists="true" 
+      data-pdf-filename="Manage attack detection parameters"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/anti-ransomware/manage-parameters-task.html">
+        Manage attack detection parameters
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Respond to abnormal activity"
       data-li-level="3#" 
       class=" "
@@ -36521,7 +36521,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-26 17:50:03 +0000">05/26/2023</time>
+    <time datetime="2023-08-08 21:14:02 +0000">08/08/2023</time>
     
   
 
@@ -36550,7 +36550,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>Beginning with ONTAP 9.11.1, you can use the CLI to control the number and retention period for Autonomous Ransomware Protection (ARP) Snapshot copies that are automatically generated in response to suspected ransomware attacks.</p>
+<p>Beginning with ONTAP 9.11.1, you can use the CLI to control the number of and retention period for Autonomous Ransomware Protection (ARP) Snapshot copies that are automatically generated in response to suspected ransomware attacks.</p>
 </div>
 </div>
 </div>
@@ -36578,6 +36578,22 @@
 <dd>
 <p>Specifies the maximum duration (in days) for which an ARP Snapshot copy can be retained. Any ARP Snapshot copy older than this duration will be deleted if there is no attack reported on the volume.</p>
 </dd>
+</dl>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+The maximum retention interval for ARP Snapshot is ignored if a moderate threat is detected. The Snapshot created just before the threat will remain until the threat has been marked a false positive. Once marked as a false positive, all other ARP Snapshots on the volume will be deleted as well.
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
 <dt class="hdlist1">arw.snap.create.interval.hours.post.max.count</dt>
 <dd>
 <p>Specifies the interval (in hours) between ARP Snapshot copies when the volume already contains the maximum number of ARP Snapshot copies. When the maximum number is reached, an ARP Snapshot copy is deleted to make room for a new copy. The new ARP Snapshot copy creation speed can be reduced to retain the older copy using this option. If the volume already contains maximum number of ARP Snapshot copies, then this interval specified in this option is used for next ARP Snapshot copy creation, instead of arw.snap.create.interval.hours.</p>

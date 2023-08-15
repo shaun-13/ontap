@@ -703,8 +703,6 @@
 
 
 
-
-
         </li>
       </ul>
     
@@ -11726,6 +11724,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -16193,11 +16193,11 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Overview"
+      data-pdf-filename="Get started"
       data-li-level="3#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/software_setup/concept_decide_whether_to_use_ontap_cli.html">
-        Overview
+    ><a class="na-navbar-padding" href="/us-en/ontap/software_setup/index.html">
+        Get started
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Set up a cluster with System Manager"
@@ -16215,13 +16215,6 @@
       </a>
       <ul style="display: none;">
         <li 
-      data-pdf-exists="true" 
-      data-pdf-filename="Gather information"
-      data-li-level="4#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/software_setup/concept_set_up_the_cluster.html">
-        Gather information
-      </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Create the cluster on the first node"
       data-li-level="4#" 
@@ -31055,6 +31048,13 @@
         Pause
       </a></li><li 
       data-pdf-exists="true" 
+      data-pdf-filename="Manage attack detection parameters"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/anti-ransomware/manage-parameters-task.html">
+        Manage attack detection parameters
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Respond to abnormal activity"
       data-li-level="3#" 
       class=" "
@@ -36521,7 +36521,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-08-09 14:31:50 +0000">08/09/2023</time>
+    <time datetime="2023-08-14 14:52:54 +0000">08/14/2023</time>
     
   
 
@@ -36568,7 +36568,7 @@
 </div>
 <div class="paragraph">
 <div class="title">About this task</div>
-<p>By default, new volumes are created with ARP in disabled mode. You can modify this setting in System Manager and with the CLI. Volumes enabled by default are set to ARP in learning mode.</p>
+<p>By default, new volumes are created with ARP in disabled mode. You can modify this setting in System Manager and with the CLI. Volumes enabled by default are set to ARP in learning (or dry-run) mode.</p>
 </div>
 <div class="paragraph">
 <p>ARP will only be enabled on volumes created in the SVM after you have changed the setting. ARP will not be enabled on existing volumes. Learn how to <a href="enable-task.html">enable ARP in an existing volume</a>.</p>
@@ -36583,12 +36583,18 @@
 <p>The <a href="index.html">correct license</a> must be installed for your ONTAP version.</p>
 </li>
 <li>
+<p>The volume must be less than 100% full.</p>
+</li>
+<li>
+<p>Junction paths must be active.</p>
+</li>
+<li>
 <p>Beginning in ONTAP 9.13.1, it&#8217;s recommended you enable multi-admin verification (MAV) so that two or more authenticated user admins are required for anti-ransomware operations. <a href="../multi-admin-verify/enable-disable-task.html" target="_blank" rel="noopener">Learn more</a>.</p>
 </li>
 </ul>
 </div>
 <details>
-<summary class="title">Autonomous ARP switching from learning to active mode</summary>
+<summary class="title">Switch ARP from learning to active mode</summary>
 <div class="content">
 <div class="paragraph">
 <p>Beginning in ONTAP 9.13.1, adaptive learning has been added to ARP analytics and the switch from learning mode to active mode is done automatically. The autonomous decision by ARP to automatically switch from learning mode to active mode is based on the configuration settings of the following options:</p>

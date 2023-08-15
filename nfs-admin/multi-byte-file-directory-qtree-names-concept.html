@@ -703,8 +703,6 @@
 
 
 
-
-
         </li>
       </ul>
     
@@ -11726,6 +11724,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -16193,11 +16193,11 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Overview"
+      data-pdf-filename="Get started"
       data-li-level="3#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/software_setup/concept_decide_whether_to_use_ontap_cli.html">
-        Overview
+    ><a class="na-navbar-padding" href="/us-en/ontap/software_setup/index.html">
+        Get started
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Set up a cluster with System Manager"
@@ -16215,13 +16215,6 @@
       </a>
       <ul style="display: none;">
         <li 
-      data-pdf-exists="true" 
-      data-pdf-filename="Gather information"
-      data-li-level="4#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/software_setup/concept_set_up_the_cluster.html">
-        Gather information
-      </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Create the cluster on the first node"
       data-li-level="4#" 
@@ -31055,6 +31048,13 @@
         Pause
       </a></li><li 
       data-pdf-exists="true" 
+      data-pdf-filename="Manage attack detection parameters"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/anti-ransomware/manage-parameters-task.html">
+        Manage attack detection parameters
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Respond to abnormal activity"
       data-li-level="3#" 
       class=" "
@@ -36521,7 +36521,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-07-18 13:39:49 +0000">07/18/2023</time>
+    <time datetime="2023-08-14 21:09:39 +0000">08/14/2023</time>
     
   
 
@@ -36563,9 +36563,19 @@
 </div>
 </li>
 <li>
-<p>If you are using ONTAP 9.6 and earlier, you cannot modify existing volumes for utf8mb4 support; you must create a new utf8mb4-ready volume, and then migrate the data using client-based copy tools. If you are using ONTAP 9.7 or later, you can modify existing volumes for utf8mb4 with a support request. For more information, see <a href="https://kb.netapp.com/onprem/ontap/da/NAS/Can_the_volume_language_be_changed_after_creation_in_ONTAP" target="_blank" rel="noopener">Can the volume language be changed after creation in ONTAP?</a>.</p>
+<p>If you are using ONTAP 9.6 and earlier, you cannot modify existing volumes for utf8mb4 support; you must create a new utf8mb4-ready volume, and then migrate the data using client-based copy tools.</p>
 <div class="paragraph">
-<p>You can update SVMs for utf8mb4 support, but existing volumes retain their original language codes.</p>
+<p>If you are using ONTAP 9.7P1 or later, you can modify existing volumes for utf8mb4 with a support request. For more information, see <a href="https://kb.netapp.com/onprem/ontap/da/NAS/Can_the_volume_language_be_changed_after_creation_in_ONTAP" target="_blank" rel="noopener">Can the volume language be changed after creation in ONTAP?</a>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>+
+You can update SVMs for utf8mb4 support, but existing volumes retain their original language codes.</p>
+</div>
+<div class="paragraph">
+<p>+</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -36579,7 +36589,8 @@ LUN names with 4-byte UTF-8 characters are not currently supported.
 </tr>
 </table>
 </div>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p>Unicode character data is typically represented in Windows file systems applications using the 16-bit Unicode Transformation Format (UTF-16) and in NFS file systems using the 8-bit Unicode Transformation Format (UTF-8).</p>
 <div class="paragraph">
