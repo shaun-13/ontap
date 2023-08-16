@@ -14,7 +14,7 @@ To set up quotas on a new storage virtual machine (SVM, formerly known as Vserve
 .Steps
 . Enter the command `vserver show -instance` to display the name of the default quota policy that was automatically created when the SVM was created.
 +
-If a name was not specified when the SVM was created, the name is "default". You can use the `vserver quota policy rename` command to give the default policy a name.
+If a name was not specified when the SVM was created, the name is "default". You can use the `volume quota policy rename` command to give the default policy a name.
 +
 [NOTE]
 ====
